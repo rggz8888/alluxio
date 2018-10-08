@@ -24,7 +24,11 @@ RUN cd /opt && \
     (if ls | grep -q ".tar.gz"; then tar -xzf *.tar.gz && rm *.tar.gz; fi) && \
     ln -s alluxio-* alluxio
 
+RUN pwd;ls -l
+
 COPY conf /opt/alluxio/conf/
+
+RUN pwd;ls -l
 
 COPY ./entrypoint.sh /
 
