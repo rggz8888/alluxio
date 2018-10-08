@@ -26,10 +26,5 @@ RUN cd /opt && \
 
 COPY conf /opt/alluxio/conf/
 
-RUN pwd;ls -l /opt/alluxio/conf/
-
-ADD entrypoint.sh /
-
-RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
