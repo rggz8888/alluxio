@@ -25,6 +25,6 @@ RUN cd /opt && \
     ln -s alluxio-* alluxio
 
 COPY conf /opt/alluxio/conf/
-COPY entrypoint.sh /
+COPY ./entrypoint.sh /
 
 ENTRYPOINT ["/entrypoint.sh"]
