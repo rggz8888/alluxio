@@ -26,8 +26,10 @@ RUN cd /opt && \
 
 COPY conf /opt/alluxio/conf/
 
-RUN pwd;ls -l;ls -l /opt/alluxio/conf/
+RUN pwd;ls -l /opt/alluxio/conf/
 
-RUN cp /opt/alluxio/conf/entrypoint.sh /
+RUN cp /opt/alluxio/conf/entrypoint /entrypoint.sh
+
+RUN chmod 755 /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
