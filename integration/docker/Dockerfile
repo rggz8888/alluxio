@@ -28,8 +28,6 @@ RUN pwd;ls -l
 
 COPY conf /opt/alluxio/conf/
 
-RUN pwd;ls -l
-
-COPY ./entrypoint.sh /
+COPY conf/entrypoint.sh /
 
 ENTRYPOINT ["/entrypoint.sh"]
