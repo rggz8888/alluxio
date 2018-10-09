@@ -10,7 +10,7 @@
 #
 
 FROM openjdk:8-jdk-alpine
-ADD *.sh /
+
 ARG ALLUXIO_TARBALL=http://downloads.alluxio.org/downloads/files/1.8.1/alluxio-1.8.1-bin.tar.gz
 
 RUN apk add --update bash && \
@@ -26,5 +26,6 @@ RUN cd /opt && \
 
 COPY conf /opt/alluxio/conf/
 
+COPY entrypoint.sh /
 
 ENTRYPOINT ["/entrypoint.sh"]
